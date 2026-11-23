@@ -1,0 +1,36 @@
+{
+    "version": "0.7.1",
+    "description": "A local-first retirement planner for the terminal and a window.",
+    "homepage": "https://github.com/kenianbei/retiretui",
+    "license": "MIT|Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kenianbei/retiretui/releases/download/v0.7.1/retiretui-x86_64-pc-windows-msvc.zip",
+            "hash": "968c37889acfa6471f395929d8fe6ea13190fa3642abffcf196df66cb665c05c"
+        }
+    },
+    "bin": [
+        "retiretui.exe",
+        "retiretui-desktop.exe"
+    ],
+    "shortcuts": [
+        [
+            "retiretui-desktop.exe",
+            "RetireTui"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/kenianbei/retiretui"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kenianbei/retiretui/releases/download/v$version/retiretui-x86_64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256",
+            "regex": "$sha256"
+        }
+    }
+}
